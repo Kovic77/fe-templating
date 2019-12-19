@@ -1,2 +1,5 @@
-# fe-templating
-FE templating system with gulp 4 and nunjucks
+# Instruction
+npm i
+
+For run: "yarn run" or "gulp"
+For scss validation: "yarn test" or "gulp validate"

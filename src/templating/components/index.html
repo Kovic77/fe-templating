@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>List of components</title>
+    <link rel="stylesheet" href="/assets/css/build.css">
+</head>
+
+<body>
+    <ul class="build-pagination">
+        <li><a href="/">Home</a></li>
+        <li>Components</li>
+    </ul>
+
+    
+    <h2>List of components:</h2>
+    <ul class="build-list">
+        {% for item in components %}
+        <li><a href="{{ item }}">{{ item }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>

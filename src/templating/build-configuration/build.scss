@@ -1,0 +1,223 @@
+//Project pagination
+
+.build-pagination {
+    display: flex;
+    margin: 0 0 30px 0;
+    margin-bottom: 30px;
+    padding: 20px;
+    list-style-type: none;
+    border-bottom: 3px dotted black;
+    background: white;
+
+    li {
+        font-size: 18px;
+        text-transform: uppercase;
+
+        &:after {
+            content: "/";
+            margin: 0 10px;
+        }
+    }
+}
+
+// Highlighter styles -- codepreview
+
+.build-code-preview {
+    display: block;
+    max-width: 900px;
+    margin: 40px auto 0;
+    padding: 0 15px;
+
+    h2 {
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    &--states {
+        max-width: 100%;
+
+        h2 {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__state-nav {
+        margin-bottom: 50px;
+
+        li {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+    }
+}
+
+.hljs {
+    padding: 30px;
+    overflow-x: auto;
+    border: 1px solid #e4e4e4;
+    border-radius: 10px;
+    background: #fafafa;
+    box-shadow: 0 0 20px -6px rgba(0, 0, 0, .23);
+    color: #383a42;
+}
+
+
+.hljs-comment,
+.hljs-quote {
+    color: #a0a1a7;
+    font-style: italic
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+    color: #a626a4
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+    color: #e45649
+}
+
+.hljs-literal {
+    color: #0184bb
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta-string {
+    color: #50a14f
+}
+
+.hljs-built_in,
+.hljs-class .hljs-title {
+    color: #c18401
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+    color: #986801
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+    color: #4078f2
+}
+
+.hljs-emphasis {
+    font-style: italic
+}
+
+.hljs-strong {
+    font-weight: bold
+}
+
+.hljs-link {
+    text-decoration: underline
+}
+
+.class-highlight {
+    max-width: 700px;
+    margin-top: 40px;
+
+    * {
+        color: #656565 !important;
+        font-weight: normal !important;
+    }
+
+    .hljs-string {
+        color: black !important;
+        font-size: 18px;
+        font-weight: bold !important;
+    }
+}
+
+// Rozcestnik
+.base-build-list {
+    display: flex;
+    align-items: flex-start;
+    margin-left: 35px;
+
+
+    li {
+        min-width: 250px;
+        margin: 35px 35px 35px 0;
+        transition: box-shadow linear .2s, color linear .2s, background linear .2s;
+        border-radius: 10px;
+        box-shadow: 0 0 12px -2px rgba(0, 0, 0, .31);
+        color: #3e3e3e;
+        text-align: center;
+
+        &:hover {
+            background: #f7f7f7;
+            box-shadow: 0 0 12px -2px rgba(0, 0, 0, .51);
+            color: #1f1f1f;
+        }
+
+        a {
+            display: inline-block;
+            width: 100%;
+            padding: 25px 0;
+            color: inherit;
+            font-size: 25px;
+            text-decoration: none;
+        }
+    }
+}
+
+//list of pages/components
+.build-list {
+    list-style-type: none;
+
+    li {
+        display: block;
+
+
+        a {
+            display: inline-block;
+            min-width: 250px;
+            padding: 10px;
+            border-bottom: 1px solid #e0e0e0;
+            color: #212121;
+            font-size: 18px;
+            text-decoration: none;
+
+            &:hover {
+                background: #e0e0e0;
+            }
+        }
+    }
+}
+
+//Build divider
+
+.build-divider {
+    margin-bottom: 40px;
+    border-bottom: 1px solid rgb(151, 151, 151);
+
+    h3 {
+        color: #3c3c3c;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    &:last-child {
+
+        border-bottom: 0;
+    }
+}

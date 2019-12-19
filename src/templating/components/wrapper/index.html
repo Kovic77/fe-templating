@@ -1,0 +1,14 @@
+<!-- index.nunjucks -->
+{% extends "build.html" %}
+{% block content %}
+
+<!-- Name of current component -->
+{% set currentComponent = "wrapper" %}
+
+<!-- Component preview and states -->
+{% include  "build-configuration/componentIndex.html" %}
+
+<!-- Escaping script -->
+{% include  "build-configuration/escaping-script.html" %}
+
+{% endblock %}

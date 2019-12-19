@@ -1,0 +1,61 @@
+{% set currentComponenthtml = currentComponent + '.html' %}
+
+<ul class="build-pagination">
+    <li>
+        <a href="/">Home</a>
+    </li>
+    <li>
+        <a href="/components">Components</a>
+    </li>
+    <li>{{currentComponent}}</li>
+</ul>
+
+<!-- Set main component name -->
+{% include "components/" + currentComponent + "/" + currentComponent + ".html" %}
+
+
+
+<div class="build-code-preview">
+    <h2>Code sample of main component:</h2>
+    <pre>
+        <code class="language-html">
+{% include  "components/" + currentComponent + "/" + currentComponent + ".html" %}
+        </code>
+    </pre>
+</div>
+
+<div class="build-code-preview build-code-preview--states">
+
+
+    {% if modif[currentComponent]|length != 1 %}
+    <h2>Component states:</h2>
+
+
+    {% endif %}
+    <ul class="build-code-preview__state-nav">
+        {% for item in modif[currentComponent] %}
+        {% if item === currentComponenthtml %}
+        {% else %}
+        <li>
+            <a href="#{{item}}">{{item}}</a>
+        </li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+    {% for item in modif[currentComponent] %}
+    <div class="build-divider">
+        {% if item === currentComponenthtml %}
+        {% else %}
+        <h3 id="{{item}}">{{item}}</h3>
+        {% include "components/" + currentComponent + "/" + item %}
+
+        <pre>
+        <code class="language-html class-highlight">
+{% include  "components/" + currentComponent + "/" + item %}
+        </code>
+    </pre>
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+
