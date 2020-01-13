@@ -1,0 +1,43 @@
+.accordion {
+    margin-bottom: 5px;
+    border: 2px solid #F3F3F5;
+
+    &__head {
+        display: block;
+        position: relative;
+        padding: 15px 40px 15px 10px;
+        font-weight: 600;
+        cursor: pointer;
+
+        &::after {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            top: 40%;
+            right: 15px;
+            padding: 8px;
+            transform: translate(0%, -50%) rotate(45deg);
+            transition: all linear .2s;
+            border: solid $c-red;
+            border-width: 0 2px 2px 0;
+        }
+
+        &.active {
+            &::after {
+                top: 60%;
+                transform: translate(0%, -50%) rotate(-135deg);
+            }
+        }
+    }
+
+    &__body {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .2s ease-out;
+        background-color: white;
+
+        p {
+            padding: 5px 10px 18px 10px;
+        }
+    }
+}

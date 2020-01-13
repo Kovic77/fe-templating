@@ -8,5 +8,9 @@ module.exports = function imageExport() {
         .pipe(rename({
             dirname: ''
         }))
-        .pipe(gulp.dest(path.images.outputPages));
+        .pipe(gulp.dest(path.images.outputPages))
+        .pipe(rename({
+            dirname: ''
+        }))
+        .pipe(gulp.dest(`${path.distAssets}/img/`));
 }

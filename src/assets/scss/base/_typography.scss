@@ -1,2 +1,16 @@
 // Typography rules
 
+body {
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+
+$small: .750em; //12px
+$base-small: .875em; //14px
+$base-big: 1.125em; //18px
+$article-heading--small: 1.250em; //20px
+$header-smaller: 1.375em; //22px
+$article-heading: 1.875em; //30px
+$header-big: 2.375em; //38px
+$fs-headline: 3.125em; //50px
+$fs-headline--small: 1.500em; //24px

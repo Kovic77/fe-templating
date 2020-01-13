@@ -1,1 +1,0 @@
-[{"base-component":["base-component.html"]},{"card":["card--active.html","card.html"]},{"test-div-house":["test-div-house.html"]},{"test-list":["test-list.html"]}]

@@ -20,7 +20,7 @@ function watchFiles() {
     gulp.watch(`${path.srcComponents}`).on('all', gulp.series(componentsCreateHtml, createPages, browserSync.reload));
     gulp.watch(`${path.srcPages}**/*.html`).on('change', gulp.series(createPages, browserSync.reload));
     gulp.watch(`${path.srcPages}`).on(['all'], gulp.series(createPages, browserSync.reload));
-    gulp.watch(`${path.srcComponents}**/js/*.js`).on('change', gulp.series(scripts, browserSync.stream));
+    gulp.watch(`${path.srcComponents}**/js/*.js`).on('change', gulp.series(scripts, browserSync.reload));
     gulp.watch(`${path.images.input}`).on(['all'], gulp.series(imageExport, browserSync.reload));
     gulp.watch('src/templating/build-configuration/**/*.html').on('change', gulp.series(componentsCreateHtml, browserSync.reload));
 

@@ -1,0 +1,61 @@
+.btn {
+    display: inline-block;
+    position: relative;
+    outline: none;
+    text-decoration: none;
+
+    &--primary {
+        padding: 8px 10px;
+        background-color: $c-red;
+        color: white;
+        font-size: $base-small;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    &--icon {
+        padding: 8px 14px 8px 33px;
+        background-color: $c-red;
+        color: white;
+        font-size: 1em;
+        font-weight: bold;
+        text-transform: uppercase;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            width: 15px;
+            height: 20px;
+            transform: translate(0%, -50%);
+            background-image: url("../img/lock-ico.png");
+            background-position: center;
+            background-size: contain;
+
+        }
+    }
+
+    &--link {
+        color: $c-red;
+        font-size: $base-small;
+    }
+
+    &--link-semi {
+        color: $c-red;
+        font-size: $base-small;
+        font-weight: 600;
+    }
+
+    &--link-big {
+        color: $c-red;
+        font-size: $base-big;
+        font-weight: 600;
+    }
+
+    &--filter {
+        color: $c-red;
+        font-size: 1em;
+        font-weight: 400;
+    }
+}

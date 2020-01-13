@@ -29,7 +29,6 @@ module.exports = function componentsCreateHtml() {
             data: {
                 components: componentlist,
                 modif: componentStatesNames,
-         
             }
         }))
         .pipe(cached('html'))

@@ -3,6 +3,7 @@ module.exports = path = {
     dist: 'dist/',
     distComponents: 'dist/components/',
     distPages: 'dist/pages/',
+    distAssets: 'dist/assets',
     src: 'src/',
     srcComponents: 'src/templating/components/',
     srcPages: 'src/templating/pages/',

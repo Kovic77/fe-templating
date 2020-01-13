@@ -10,13 +10,13 @@
     <li>{{currentComponent}}</li>
 </ul>
 
-<!-- Set main component name -->
+<!-- Set main component fiile name -->
 {% include "components/" + currentComponent + "/" + currentComponent + ".html" %}
 
 
-
+<!-- Code sample of main component -->
 <div class="build-code-preview">
-    <h2>Code sample of main component:</h2>
+    <h2 class="build-code-preview__headline">Code sample of main component:</h2>
     <pre>
         <code class="language-html">
 {% include  "components/" + currentComponent + "/" + currentComponent + ".html" %}
@@ -24,11 +24,13 @@
     </pre>
 </div>
 
+
+<!-- list of component states and modificators in current component folder -->
 <div class="build-code-preview build-code-preview--states">
 
 
     {% if modif[currentComponent]|length != 1 %}
-    <h2>Component states:</h2>
+    <h2 class="build-code-preview--states__head">Component states:</h2>
 
 
     {% endif %}
@@ -46,7 +48,7 @@
     <div class="build-divider">
         {% if item === currentComponenthtml %}
         {% else %}
-        <h3 id="{{item}}">{{item}}</h3>
+        <h3 id="{{item}}" class="build-divider__headline">{{item}}</h3>
         {% include "components/" + currentComponent + "/" + item %}
 
         <pre>
@@ -58,4 +60,3 @@
     </div>
     {% endfor %}
 </div>
-
